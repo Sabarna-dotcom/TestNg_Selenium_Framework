@@ -8,6 +8,9 @@
 
         <classes>
             <class name="com.ui.tests.LoginTest"/>
+            <class name="com.ui.tests.InvalidLoginTest"/>
+            <class name="com.ui.tests.ProductSearchTest"/>
+            <class name="com.ui.tests.AddToCartTest"/>
         </classes>
     </test>
 </suite>
