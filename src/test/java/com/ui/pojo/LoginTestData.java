@@ -2,7 +2,7 @@ package com.ui.pojo;
 
 import java.util.List;
 
-public class TestData {
+public class LoginTestData {
     List<User> data;
 
     public List<User> getData() {

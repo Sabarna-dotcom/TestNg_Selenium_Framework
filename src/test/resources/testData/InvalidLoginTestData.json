@@ -1,0 +1,10 @@
+{
+  "data": [
+    {
+      "emailAddress": "testuser1@gmail.com",
+      "password": "password123",
+      "name": "Test User 1",
+      "errorMessage": "Authentication failed."
+    }
+  ]
+}

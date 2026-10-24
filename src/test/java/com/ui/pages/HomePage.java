@@ -27,7 +27,8 @@ public final class HomePage extends BrowserUtility {
 
     public HomePage(WebDriver driver) {
         super(driver);
-        goToWebsite(readJSON(QA).getUrl());
+        //goToWebsite(readJSON(QA).getUrl());
+        goToWebsite(readProperties(QA, "URL"));
     }
 
     public LoginPage goToLoginInPage() {

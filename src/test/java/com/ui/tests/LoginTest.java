@@ -13,7 +13,7 @@ public class LoginTest extends TestBase{
 //    @Test(description = "Verify that user is able to login with valid credentials and get the correct username displayed on the My Account page",
 //            groups = {"e2e"},
 //            dataProviderClass = com.ui.dataprovidors.LoginDataProvider.class,
-//            dataProvider = "LoginTestDataProvider"
+//            dataProvider = "LoginTestExcelDataProvider"
 //    )
 //    public void loginTest(User user) {
 //        assertEquals(homePage.goToLoginInPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(),"Sabarna SARKAR");
@@ -31,11 +31,11 @@ public class LoginTest extends TestBase{
     @Test(description = "Verify that user is able to login with valid credentials and get the correct username displayed on the My Account page",
             groups = {"e2e"},
             dataProviderClass = com.ui.dataprovidors.LoginDataProvider.class,
-            dataProvider = "LoginTestExcelDataProvider",
+            dataProvider = "LoginTestDataProvider",
             retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class
     )
-    public void loginExcelTest(User user) {
-        assertEquals(homePage.goToLoginInPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(),"Sabarna SARKAR");
+    public void loginTest(User user) {
+        assertEquals(homePage.goToLoginInPage().doLoginWith(user.getEmailAddress(),user.getPassword()).getUserName(),user.getName());
     }
 
 

@@ -1,10 +1,8 @@
 package com.ui.dataprovidors;
 
 import com.google.gson.Gson;
-import com.ui.pojo.TestData;
+import com.ui.pojo.LoginTestData;
 import com.ui.pojo.User;
-import com.utility.CSVReaderUtility;
-import com.utility.ExcelReaderUtility;
 import org.testng.annotations.DataProvider;
 
 import java.io.File;
@@ -19,7 +17,7 @@ public class LoginDataProvider {
     @DataProvider(name="LoginTestDataProvider")
     public Iterator<Object[]> loginDataProvider() {
         Gson gson = new Gson();
-        File testDataFile = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/logindata.json");
+        File testDataFile = new File(System.getProperty("user.dir") + "/src/test/resources/testdata/LoginTestData.json");
 
         FileReader fileReader = null;
         try {
@@ -28,7 +26,7 @@ public class LoginDataProvider {
             throw new RuntimeException(e);
         }
 
-        TestData data = gson.fromJson(fileReader, TestData.class);
+        LoginTestData data = gson.fromJson(fileReader, LoginTestData.class);
 
         List<Object[]> dataToReturn = new ArrayList<Object[]>();
         for(User user : data.getData()) {
@@ -38,12 +36,12 @@ public class LoginDataProvider {
         return dataToReturn.iterator();
     }
 
-    @DataProvider(name = "LoginTestCSVDataProvider")
-    public Iterator<User> loginCSVDataProvider() {
-        return CSVReaderUtility.readCSVFile("loginData.csv");
-    }
-    @DataProvider(name = "LoginTestExcelDataProvider")
-    public Iterator<User> loginExcelDataProvider() {
-        return ExcelReaderUtility.readExcelFile("loginData.xlsx");
-    }
+//    @DataProvider(name = "LoginTestCSVDataProvider")
+//    public Iterator<User> loginCSVDataProvider() {
+//        return CSVReaderUtility.readCSVFile("loginData.csv");
+//    }
+//    @DataProvider(name = "LoginTestExcelDataProvider")
+//    public Iterator<User> loginExcelDataProvider() {
+//        return ExcelReaderUtility.readExcelFile("loginData.xlsx");
+//    }
 }

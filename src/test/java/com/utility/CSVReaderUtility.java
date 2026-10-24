@@ -14,32 +14,32 @@ import java.util.List;
 
 public class CSVReaderUtility {
 
-        public static Iterator<User> readCSVFile(String filename) {
-            File csvFile = new File(System.getProperty("user.dir") + "/src/test/resources/testData/" + filename);
-            FileReader fileReader = null;
-            CSVReader csvReader;
-            String[] line;
-            List<User> userList=null;
-            User userData;
-
-            try {
-                fileReader = new FileReader(csvFile);
-                csvReader = new CSVReader(fileReader);
-                csvReader.readNext();
-
-                userList = new ArrayList<User>();
-
-                while ((line = csvReader.readNext()) != null) {
-                    userData = new User(line[0], line[1]);
-                    userList.add(userData);
-                }
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-
-            } catch (CsvValidationException | IOException e) {
-                e.printStackTrace();
-            }
-            return userList.iterator();
-        }
+//        public static Iterator<User> readCSVFile(String filename) {
+//            File csvFile = new File(System.getProperty("user.dir") + "/src/test/resources/testData/" + filename);
+//            FileReader fileReader = null;
+//            CSVReader csvReader;
+//            String[] line;
+//            List<User> userList=null;
+//            User userData;
+//
+//            try {
+//                fileReader = new FileReader(csvFile);
+//                csvReader = new CSVReader(fileReader);
+//                csvReader.readNext();
+//
+//                userList = new ArrayList<User>();
+//
+//                while ((line = csvReader.readNext()) != null) {
+//                    userData = new User(line[0], line[1]);
+//                    userList.add(userData);
+//                }
+//
+//            } catch (FileNotFoundException e) {
+//                e.printStackTrace();
+//
+//            } catch (CsvValidationException | IOException e) {
+//                e.printStackTrace();
+//            }
+//            return userList.iterator();
+//        }
 }

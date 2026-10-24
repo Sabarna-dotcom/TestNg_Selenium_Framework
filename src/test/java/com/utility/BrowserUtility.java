@@ -11,11 +11,17 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import java.time.Duration;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public abstract class BrowserUtility {
 
@@ -110,19 +116,42 @@ public abstract class BrowserUtility {
         driver.get().manage().window().maximize();
     }
 
+    public void waitForElementToBeVisible(WebElement element, int timeoutInSeconds) {
+        try {
+            new WebDriverWait(driver.get(), Duration.ofSeconds(timeoutInSeconds))
+                    .until(ExpectedConditions.visibilityOf(element));
+        } catch (TimeoutException e) {
+            logger.error("Element not visible after waiting for " + timeoutInSeconds + " seconds: " + e.getMessage());
+        }
+    }
+
+
     public void clickOn(By locator) {
         WebElement webElement=driver.get().findElement(locator);
+        waitForElementToBeVisible(webElement, 20);
         webElement.click();
     }
 
     public void enterText(By locator, String text) {
         WebElement webElement=driver.get().findElement(locator);
+        waitForElementToBeVisible(webElement, 20);
         webElement.sendKeys(text);
     }
 
     public String getText(By locator) {
         WebElement webElement=driver.get().findElement(locator);
+        waitForElementToBeVisible(webElement, 20);
         return webElement.getText();
+    }
+
+    public List<String> getTexts(By locator) {
+        List<WebElement> webElements = driver.get().findElements(locator);
+        waitForElementToBeVisible(webElements.get(0), 20);
+        List<String> texts = new ArrayList<>();
+        for (WebElement element : webElements) {
+            texts.add(element.getText());
+        }
+        return texts;
     }
 
     public String takeScreenshot(String name) {
