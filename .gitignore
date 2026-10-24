@@ -45,3 +45,6 @@ target/
 
 report.html
 .env
+
+.mvn
+logs
