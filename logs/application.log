@@ -1,0 +1,43 @@
+2026-10-24 17:11:08 [main] INFO com.ui.tests.LoginTest::onStart::74 - Test Suite Started
+2026-10-24 17:11:08 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::setup::40 - Trying to launch the browser in LambdaTest
+2026-10-24 17:11:48 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::goToWebsite::105 - Trying to load the website with URL: https://automationpractice.techwithjatin.com/
+2026-10-24 17:11:49 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::22 - loginExcelTest
+2026-10-24 17:11:49 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::23 - Verify that user is able to login with valid credentials and get the correct username displayed on the My Account page
+2026-10-24 17:11:49 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::24 - [e2e]
+2026-10-24 17:11:49 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::goToLoginInPage::34 - Trying to perform click on Sign In page
+2026-10-24 17:11:50 [TestNG-test-UI Automation Test-1] WARN com.ui.tests.LoginTest::onTestSkipped::69 - loginExcelTest SKIPPED
+2026-10-24 17:11:50 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::tearDown::56 - Closing the browser after test execution
+2026-10-24 17:11:51 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::setup::40 - Trying to launch the browser in LambdaTest
+2026-10-24 17:12:13 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::goToWebsite::105 - Trying to load the website with URL: https://automationpractice.techwithjatin.com/
+2026-10-24 17:12:14 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::22 - loginExcelTest
+2026-10-24 17:12:14 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::23 - Verify that user is able to login with valid credentials and get the correct username displayed on the My Account page
+2026-10-24 17:12:14 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::24 - [e2e]
+2026-10-24 17:12:14 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::goToLoginInPage::34 - Trying to perform click on Sign In page
+2026-10-24 17:12:16 [TestNG-test-UI Automation Test-1] WARN com.ui.tests.LoginTest::onTestSkipped::69 - loginExcelTest SKIPPED
+2026-10-24 17:12:16 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::tearDown::56 - Closing the browser after test execution
+2026-10-24 17:12:16 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::setup::40 - Trying to launch the browser in LambdaTest
+2026-10-24 17:12:38 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::goToWebsite::105 - Trying to load the website with URL: https://automationpractice.techwithjatin.com/
+2026-10-24 17:12:39 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::22 - loginExcelTest
+2026-10-24 17:12:39 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::23 - Verify that user is able to login with valid credentials and get the correct username displayed on the My Account page
+2026-10-24 17:12:39 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::24 - [e2e]
+2026-10-24 17:12:39 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::goToLoginInPage::34 - Trying to perform click on Sign In page
+2026-10-24 17:12:40 [TestNG-test-UI Automation Test-1] ERROR com.ui.tests.LoginTest::onTestFailure::34 - loginExcelTest FAILED
+2026-10-24 17:12:40 [TestNG-test-UI Automation Test-1] ERROR com.ui.tests.LoginTest::onTestFailure::35 - no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title="View my customer account"]/span"}
+  (Session info: chrome=127.0.6533.73)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.49.0', revision: 'bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [d7184ab4d608b81607e7b07ccf5948d5, findElement {value=//a[@title="View my customer account"]/span, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.73, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:9225}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows XP, proxy: Proxy(), se:bidiEnabled: false, se:cdp: wss://cdp-mumbai.lambdatest..., se:cdpVersion: 127.0.6533.73, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7184ab4d608b81607e7b07ccf5948d5
+2026-10-24 17:12:41 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::tearDown::56 - Closing the browser after test execution
+2026-10-24 17:12:41 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::setup::40 - Trying to launch the browser in LambdaTest
+2026-10-24 17:13:03 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::goToWebsite::105 - Trying to load the website with URL: https://automationpractice.techwithjatin.com/
+2026-10-24 17:13:04 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::22 - loginExcelTest
+2026-10-24 17:13:04 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::23 - Verify that user is able to login with valid credentials and get the correct username displayed on the My Account page
+2026-10-24 17:13:04 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestStart::24 - [e2e]
+2026-10-24 17:13:04 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::goToLoginInPage::34 - Trying to perform click on Sign In page
+2026-10-24 17:13:06 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::onTestSuccess::29 - loginExcelTest PASSED
+2026-10-24 17:13:06 [TestNG-test-UI Automation Test-1] INFO com.ui.tests.LoginTest::tearDown::56 - Closing the browser after test execution
+2026-10-24 17:13:07 [main] INFO com.ui.tests.LoginTest::onFinish::79 - Test Suite Completed
