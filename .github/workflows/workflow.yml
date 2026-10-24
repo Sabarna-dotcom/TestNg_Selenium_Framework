@@ -74,26 +74,3 @@
         - name: Test Execution Status
           if: always()
           run: echo "Test Execution Completed"
-
-        - name: Prepare Report for GitHub Pages
-          if: always()
-          run: |
-            mkdir -p public/extent-reports
-            
-            if [ -f report.html ]; then
-              cp report.html public/extent-reports/
-            fi
-            
-            if [ -d screenshots ]; then
-              cp -R screenshots public/extent-reports/
-            fi
-            
-            ls -la public/extent-reports
-
-        - name: Deploy Report to GitHub Pages
-          if: always()
-          uses: JamesIves/github-pages-deploy-action@v4
-          with:
-            folder: public/extent-reports/
-            token: ${{ secrets.PAT1234 }}
-            clean: true
