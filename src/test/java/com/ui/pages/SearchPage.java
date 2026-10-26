@@ -16,6 +16,7 @@ public class SearchPage extends BrowserUtility {
 
     private static final By SEARCH_RESULT_LOCATOR = By.xpath("//h5[@itemprop=\"name\"]");
     private static final By ADD_TO_CART_MESSAGE_LOCATOR = By.xpath("//div[contains(@class,\"layer_cart_product col-xs-12 col-md-6\")]/span[@class=\"title\"]");
+    private static final By GO_TO_CHECKOUT_BUTTON = By.xpath("//span[contains(.,'Proceed to checkout')]");
 
     public SearchPage(WebDriver driver) {
         super(driver);
@@ -58,6 +59,12 @@ public class SearchPage extends BrowserUtility {
         logger.info("Product added to cart successfully: " + productName);
 
         return getText(ADD_TO_CART_MESSAGE_LOCATOR);
+    }
+
+    public OrderPage goToOrderPage() {
+        logger.info("Navigating to Order page");
+        clickOn(GO_TO_CHECKOUT_BUTTON);
+        return new OrderPage(getDriver());
     }
 
 }

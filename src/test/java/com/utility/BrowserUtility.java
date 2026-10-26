@@ -14,6 +14,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import java.time.Duration;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
@@ -125,10 +126,19 @@ public abstract class BrowserUtility {
         }
     }
 
+    public void waitForElementToBeClickable(WebElement element, int timeoutInSeconds) {
+        try {
+            new WebDriverWait(driver.get(), Duration.ofSeconds(timeoutInSeconds))
+                    .until(ExpectedConditions.elementToBeClickable(element));
+        } catch (TimeoutException e) {
+            logger.error("Element not visible after waiting for " + timeoutInSeconds + " seconds: " + e.getMessage());
+        }
+    }
+
 
     public void clickOn(By locator) {
         WebElement webElement=driver.get().findElement(locator);
-        waitForElementToBeVisible(webElement, 20);
+        waitForElementToBeClickable(webElement, 20);
         webElement.click();
     }
 
@@ -152,6 +162,22 @@ public abstract class BrowserUtility {
             texts.add(element.getText());
         }
         return texts;
+    }
+
+    public void selectFromDropDownByValue(By dropDownLocator, String optionToSelect) {
+        logger.info("Finding dropdown with locator: " + dropDownLocator);
+
+        WebElement element = driver.get().findElement(dropDownLocator);
+        Select select = new Select(element);
+
+        select.selectByValue(optionToSelect);
+    }
+
+    public void clearText(By textBoxLocator) {
+        logger.info("Finding Element with the locator" + textBoxLocator);
+        WebElement element = driver.get().findElement(textBoxLocator);
+        logger.info("Element Found and clearing the text box field");
+        element.clear();
     }
 
     public String takeScreenshot(String name) {
